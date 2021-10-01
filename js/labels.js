@@ -65,7 +65,7 @@ const scents = {
         "pictograms": ["flamable-items.png", "kids.png", "unattended.png","exclamation-white.png", "exclamation-yellow.png","address.png" ]
     },
     "Vanilla": {
-        "spiceName": "Vanillia Fragrance 10%",
+        "spiceName": "Vanilla Fragrance 10%",
         "allergents": "Benzyl Alcohol, Coumarin, Eugenol",
         "warning": "Do not ingest. Keep away from children",
         "firstAid": "Skin contact: Wash immediately with plenty of soap and water. Eye contact: Bathe the eye with running water for 15 minutes. Ingestion: Wash out mouth with water. Inhalation: Consult a doctor.",

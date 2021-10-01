@@ -53,7 +53,7 @@ let contentPopulator = function (spice, scentName) {
         addressParagraph.style.display = 'none';
       }
       let img = document.createElement('img');
-      img.setAttribute('src', `../pictograms/${imagePath}`);
+      img.setAttribute('src', `pictograms/${imagePath}`);
       df.appendChild(img);
     });
     imgContainer.appendChild(df);

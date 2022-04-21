@@ -1,7 +1,7 @@
 /* GLOBAL */
 @font-face {
-  font-family: 'FreeScript';
-  src: url('../fonts/FREESCPT.TTF') format('truetype');
+  font-family: "FreeScript";
+  src: url("../fonts/FREESCPT.TTF") format("truetype");
 }
 @media print {
   nav {
@@ -14,7 +14,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'calibri';
+  font-family: "calibri";
 }
 body {
   width: 1400px;
@@ -64,8 +64,9 @@ div select {
   font-weight: bold;
 }
 .print span {
-  font-size: 2.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
+  margin-left: 5px;
 }
 
 /* MAIN LAYOUT - LAYOUT FOR LABELS */
@@ -92,9 +93,9 @@ main {
   margin-left: 250px;
   display: grid;
   grid-template:
-    'area1 area2'
-    'area3 area4'
-    'area5 area6';
+    "area1 area2"
+    "area3 area4"
+    "area5 area6";
   grid-gap: 20px;
   z-index: 10;
   margin-top: 40px;

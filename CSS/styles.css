@@ -1,0 +1,157 @@
+/* GLOBAL */
+@font-face {
+  font-family: "FreeScript";
+  src: url("../fonts/FREESCPT.TTF") format("truetype");
+}
+@media print {
+  nav {
+    display: none !important;
+  }
+  main {
+    margin-left: 0px !important;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "calibri";
+}
+body {
+  width: 1400px;
+  display: flex;
+}
+
+/* NAVIGATION MENU */
+nav {
+  height: 100vh;
+  width: 175px;
+  background-color: lightseagreen;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 1rem;
+  z-index: 20;
+}
+nav div p {
+  padding-bottom: 3px;
+}
+nav div select {
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+select.selected {
+  border: 3px solid salmon;
+}
+div select {
+  display: block;
+  width: 100%;
+}
+.print {
+  text-align: center;
+  margin-bottom: 10px;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.print:hover {
+  background-color: salmon;
+  font-weight: bold;
+}
+.print span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* MAIN LAYOUT - LAYOUT FOR LABELS */
+.label-1 {
+  grid-area: area1;
+}
+.label-2 {
+  grid-area: area2;
+}
+.label-3 {
+  grid-area: area3;
+}
+.label-4 {
+  grid-area: area4;
+}
+.label-5 {
+  grid-area: area5;
+}
+.label-6 {
+  grid-area: area6;
+}
+
+main {
+  margin-left: 250px;
+  display: grid;
+  grid-template:
+    "area1 area2"
+    "area3 area4"
+    "area5 area6";
+  grid-gap: 20px;
+  z-index: 10;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+/* INDIVIDUAL LABELS */
+
+.label-container {
+  width: 500px;
+  border: 1px solid lightgrey;
+  position: relative;
+}
+.title-container {
+  position: relative;
+}
+.text-container {
+  padding: 1rem;
+  text-align: center;
+  margin-top: -35px;
+}
+.images-container {
+  display: flex;
+  width: inherit;
+  padding: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -20px;
+}
+.images-container img {
+  width: 15%;
+}
+h1 {
+  font-family: FreeScript;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 500;
+}
+.weight {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  font-size: 33px;
+}
+h3 {
+  padding-top: 8px;
+}
+p {
+  line-height: 15px;
+  font-size: 14px;
+}
+.address {
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}

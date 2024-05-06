@@ -1,18 +1,11 @@
-import {FC, useState} from 'react'
-import {Lang, Scent} from "./data/types.ts";
-import {SelectMenu} from "./SelectMenu.tsx";
+import {FC} from 'react'
+import {IScent} from "./data/types.ts";
 
-export const ContainerCandles: FC<{ language: Lang }> = (props) => {
-    const [selected, setSelected] = useState<(Scent | undefined)[]>([])
+export const ContainerLabel: FC<{ scent: IScent }> = (props) => {
 
     return (
-        <div className={'flex gap-10'}>
-            <SelectMenu count={6} language={props.language} selected={selected} setSelected={setSelected}/>
-            <div className={'flex-1 flex justify-center items-center'}>
-
-            <div className={'printable'}>
-            </div>
-            </div>
-        </div>
+        <section className={'w-[72mm] h-[72mm] flex rounded-full border border-black'}>
+            {props.scent.name}
+        </section>
     )
 }

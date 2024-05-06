@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {useState} from 'react'
+import {Lang} from "./data/types.ts";
+import {ContainerCandles} from "./ContainerCandels.tsx";
+
+enum Type {
+    container = 'Container Label',
+}
+
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [language, setLanguage] = useState<Lang>(Lang.en)
+    const [type, setType] = useState<Type>(Type.container)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const handleTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setType(e.target.value as Type)
+    }
+
+    const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setLanguage(e.target.value as Lang)
+    }
+
+    return (
+        <div className={'bg-cyan-50 min-h-screen'}>
+            <nav className={'flex items-center gap-5 p-5 bg-pink-200 shadow'}>
+                <p className={'flex gap-2'}>
+                    <label>Language</label>
+                    <select
+                        value={language}
+                        onChange={handleLanguageChange}
+                    >
+                        {Object.values(Lang).map(value => (
+                            <option key={value} value={value}>{value}</option>
+                        ))}
+                    </select>
+                </p>
+                <p className={'flex gap-2'}>
+                    <label>Type</label>
+                    <select
+                        value={type}
+                        onChange={handleTypeChange}
+                    >
+                        {Object.values(Type).map(value => (
+                            <option key={value} value={value}>{value}</option>
+                        ))}
+                    </select>
+                </p>
+            </nav>
+            <div className={'p-5'}>
+
+            <ContainerCandles language={language}/>
+            </div>
+
+        </div>
+    )
 }
 
 export default App
